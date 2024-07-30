@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# React Chat Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple chat application built with React.js. The application allows users to send and display messages. Each message is randomly assigned a username from a predefined list, and users can like messages and can send emoji in their chat messages.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Send and display messages
+- Randomly assigned usernames for each message
+- Like button for each message to count likes
+- Mentions feature to mention users in messages
+- Send Emoji using react emoji picker
 
-### `npm start`
+## Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Check out the live demo of the application: [Live Demo](https://prasanth-chat-app.vercel.app/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js and npm installed on your machine
 
-### `npm run build`
+### Frontend Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository and navigate to the project directory:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```sh
+   git clone https://github.com/prasanth-p8/prasanth-chat-app
+   cd prasanth-chat-app
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install the necessary dependencies:
 
-### `npm run eject`
+   ```sh
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Start the React development server:
+   ```sh
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Open your browser and navigate to `http://localhost:3000` to access the chat application.
+- Type your message in the input box and press the "Send" button or hit the "Enter" key to send the message.
+- Messages will appear in the chat window with a randomly assigned username.
+- Click the "Like" button next to a message to increase its like count.
+- Type `@` in the message input to mention a user from the list.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Code Overview
 
-## Learn More
+### Frontend (`src/App.js`)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- A React component that handles the chat interface.
+- Manages the state for messages and the input message.
+- Handles sending messages and liking messages.
+- Includes the `MentionsInput` component from `react-mentions` for user mentions.
+- Includes the `Picker` component from `emoji-picker-react` for sending emoji's.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Frontend (`src/App.css`)
 
-### Code Splitting
+- Contains basic styling for the chat application interface.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Frontend (`src/mentionsStyle.js`)
 
-### Analyzing the Bundle Size
+- Contains styling for the `MentionsInput` component to display mention user list.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Dependencies
 
-### Making a Progressive Web App
+- react
+- react-dom
+- react-mentions
+- react-bootstrap
+- date-fns
+- emoji-picker-react
+- react-icons
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contributing
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you wish to contribute to the project, feel free to fork the repository and submit a pull request.
